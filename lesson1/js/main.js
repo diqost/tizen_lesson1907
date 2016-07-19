@@ -33,7 +33,6 @@
     				console.error("getCurrentApplication(): " + error.message);
     			}
     		}
-    		
     	});
     	/*infoElem = document.getElementById('text1');
         imgElem = document.getElementById('image1');
@@ -44,13 +43,5 @@
     };
     // window.onload can work without <body onload="">
     window.onload = init;
-    var state = false;
-
-    function changeImageVisibility() {
-    	state = ! state;
-    	
-    	imgElem.style.visibility = state ? 'hidden': 'visible';
-    	infoElem.style.visibility = state ? 'hidden': 'visible';
-
-    }
+  
 } () );
