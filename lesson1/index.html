@@ -39,6 +39,7 @@
 				<li class="ui-li-anchor"><a href="#page2">Show page 2</a></li>
 				<li class="ui-li-anchor"><a href="#page3">Show page 3</a></li>
 				<li class="ui-li-anchor"><a href="#page4">Show page 4</a></li>
+				<li class="ui-li-anchor"><a href="#page5">Show page 5</a></li>
 
 			</ul>
 
@@ -87,6 +88,55 @@
 				Your browser does not support the video tag.
 			</video>
 		</div>
+	</div>
+	<div class="ui-page" id="page5">
+		<div class="ui-header">
+			<h1>Five</h1>
+		</div>
+		<div class="ui-content">
+			<canvas id='draw' width='240' height='180' style='border: 1px solid;'></canvas>
+			<script type='text/javascript'>
+				var canvas = document.getElementById("draw")
+				var ctx = canvas.getContext("2d");
+				ctx.font = "30px Arial";
+
+				ctx.fillText("Теперь Вы можете отображать", 15, 40);
+				ctx.fillStyle = "Red";
+				ctx.fillText("произвольный текст", 100, 70);
+				ctx.font = "15px Arial";
+
+				ctx.fillStyle = "Blue";
+				ctx.fillText("в элементе canvas.", 60, 120);
+
+				var grd = ctx.createLinearGradient(0, 0, 170, 0);
+				grd.addColorStop(0, "black");
+				grd.addColorStop(1, "yellow");
+
+				ctx.fillStyle = grd;
+				ctx.fillRect(100, 100, 150, 100);
+			</script>
+			<canvas id='chess' width='240' height='180' style='border: 1px solid;'></canvas>
+			<script type='text/javascript'>
+				var canvas = document.getElementById("chess")
+				var ctx = canvas.getContext("2d");
+				var black = "Black";
+				var sizeX = 8, sizeY = 8;
+				var width = 240, height = 180;
+				ctx.fillStyle = "White";
+				ctx.fillRect(0,0, width,height);
+				ctx.fillStyle = "Black";
+				var cellWidth = width / (sizeX * 1.0);
+				var cellHeight = height / (sizeY * 1.0);
+				
+				for (var i = 0; i < sizeX; i++) {
+					for (var j = 0; j < sizeY; j++) {
+						if ((i+j)%2==0)
+							ctx.fillRect(i*cellWidth,j*cellHeight, cellWidth,cellHeight);
+					}
+				}
+			</script>
+		</div>
+
 	</div>
 
 

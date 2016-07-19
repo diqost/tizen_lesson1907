@@ -40,9 +40,6 @@
 
     	infoElem.innerHTML = screen.width + ":" + screen.height;*/
     	
-    	
-    	$("#jqtxt").text("jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам");
-     	$("#jqtxt").css('color', 'red');
 
     };
     // window.onload can work without <body onload="">
