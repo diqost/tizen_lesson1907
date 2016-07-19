@@ -3,5 +3,4 @@
 #modify
 res/wgt/author-signature.xml
 res/wgt/signature1.xml
-res/wgt/js/page1.js
-res/wgt/page1.html
+res/wgt/index.html
