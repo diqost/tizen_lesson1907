@@ -1,0 +1,11 @@
+.title {
+	font-weight: Bold;
+}
+
+.description {
+	font-size: 12pt;
+	font-family: "times new roman";
+	font-weight: cursive;
+	font-style: Italic;
+	color: #23238e;
+}
