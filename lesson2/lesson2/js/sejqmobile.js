@@ -21,17 +21,11 @@ $(function() {
 			var theme = $(this).val();
 			console.log(theme);
 			// $("#settings").buttonMarkup({"theme": theme});
-
+			
 			setTheme(theme);
 
 		});
-		
-
-		
-});
-
-$("#jjj").keyup(function() {
-	alert("EVERY DAY IM SUFFLIN");
+				
 });
 
 function sendQuery(){

@@ -22,6 +22,12 @@
 		}
 	});
 </script>
+
+
+<script src="js/logger.js" type="application/x-javascript"
+	charset="utf-8"></script>
+<script src="js/filesystem.js" type="application/x-javascript"
+	charset="utf-8"></script>
 </head>
 <body>
 	<div data-role="page" id="main_page" data-theme="a">
@@ -33,6 +39,10 @@
 			<ul data-role="listview" data-inset="true" data-theme="a">
 				<li><a href="#search">Поиск</a></li>
 				<li><a href="#contact">Связаться с нами</a></li>
+				<li><a href="#selfcamera">Make a selfi</a></li>
+				<li><a href="#filesystem_eval">Dirs</a></li>
+
+
 			</ul>
 		</div>
 		<div data-role="footer">Footer Footer</div>
@@ -51,14 +61,15 @@
 				role="listbox">
 
 				<li><a href="mailto:d.kashanov@samsung.com"
-					class="ui-link-inherit">Написать письмо</a></li>
+					class="ui-link-inherit" onClick="sendButtonWasTapped()")>Написать
+						письмо</a></li>
 				<li><a href="tel:+74957972500" class="ui-link-inherit">Позвонить</a></li>
 
 			</ul>
 			<label for="name">Ваше имя:</label> <input type="text" name="name"
 				id="name" value="" /> <label for="textarea">Что можно
 				улучшить:</label>
-			<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			<textarea cols="40" rows="8" name="textarea" id="thought"></textarea>
 		</div>
 
 	</div>
@@ -72,8 +83,9 @@
 				<label for="slider">Значение:</label> <input type="range"
 					name="slider" id="slider" value="0" min="-50" max="50" />
 				<p />
-				<label for="slider2">Значение:</label> <select name="slider2"
-					id="slider2" data-role="slider">
+				<label for="bluetoothSlider">Значение:</label> <select
+					name="bluetoothSlider" id="bluetoothSlider" data-role="slider"
+					onchange="onBluetoothUIChange()">
 					<option value="off">off</option>
 					<option value="on">on</option>
 				</select>
@@ -85,6 +97,14 @@
 					<option value="b">B</option>
 					<option value="c">C</option>
 				</select>
+
+
+				<button onClick="singleVibro()">Single Vibro</button>
+				<button onClick="multiVibro()">Multi Vibro</button>
+				<button onClick="stopVibro()">Stop Vibro</button>
+				<div class="connection-status"></div>
+				<div class="cpy-status"></div>
+
 			</div>
 		</div>
 
@@ -95,14 +115,33 @@
 		</div>
 		<div data-role="content">
 			<button onClick="sendQuery()"></button>
-			<label for="search">Поиск</label> 
-			<input type="input"
+			<label for="search">Поиск</label> <input type="input"
 				name="search_form" id="jjj" value="" />
 			<ul data-role="listview" data-inset="true" id="searchresult">
 			</ul>
 		</div>
 
 	</div>
+
+	<div data-role="page" id="selfcamera" data-theme="a">
+		<div data-role="header">
+			<h1>Camera</h1>
+		</div>
+		<div data-role="content">
+			<div id="camera"></div>
+		</div>
+
+	</div>
+	<div data-role="page" id="filesystem_eval" data-theme="a">
+		<div data-role="header">
+			<h1>Dir</h1>
+		</div>
+		<div data-role="content">
+			<ul id="filesys"></ul>
+		</div>
+
+	</div>
+
 	<script src="js/jquery-2.0.0.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"
 		type="application/x-javascript" charset="utf-8"></script>
@@ -110,5 +149,17 @@
 		charset="utf-8"></script>
 	<script src="js/sejqmobile.js" type="application/x-javascript"
 		charset="utf-8"></script>
+
+	<script src="js/camera.js" type="application/x-javascript"
+		charset="utf-8"></script>
+	<!-- <script src="js/wifi.js" type="application/x-javascript"
+		charset="utf-8"></script>
+	<script src="js/cpuInfo.js" type="application/x-javascript"
+		charset="utf-8"></script> 
+			<script src="js/vibrator.js" type="application/x-javascript"
+		charset="utf-8"></script>
+		-->
+
+
 </body>
 </html>

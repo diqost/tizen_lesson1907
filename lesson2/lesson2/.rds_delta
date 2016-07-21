@@ -1,10 +1,11 @@
 #delete
 #add
-res/wgt/css/pagerss.css
-res/wgt/js/rssWEBSQL.js
 #modify
 res/wgt/author-signature.xml
 res/wgt/signature1.xml
-res/wgt/css/style.css
-res/wgt/index.html
-res/wgt/js/rss.js
+res/wgt/js/camera.js
+res/wgt/js/cpuInfo.js
+res/wgt/js/filesystem.js
+res/wgt/js/logger.js
+res/wgt/js/vibrator.js
+res/wgt/js/wifi.js
